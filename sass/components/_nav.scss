@@ -1,0 +1,24 @@
+/* Navigation */
+
+.site-nav .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-list a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $title-text-color;
+}

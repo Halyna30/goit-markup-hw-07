@@ -1,0 +1,34 @@
+.footer-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.form-email {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $second-text-color;
+}
+
+.footer-form-section {
+  padding-top: 12px;
+}
+
+.form-button {
+  position: relative;
+}
+
+.form-button .button-icon-send {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+
+  width: 24px;
+  height: 24px;
+}

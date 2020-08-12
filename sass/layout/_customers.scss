@@ -1,0 +1,44 @@
+/* Customers */
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+}
+
+.customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers-list-logo:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers-list-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-link-item {
+  display: block;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-list-logo:hover .client-link-item,
+.customers-list-logo:focus .client-link-item {
+  fill: $accent-color;
+}
+
+.customers-list-logo:hover,
+.customers-list-logo:focus {
+  border-radius: 4px;
+  border: 1px solid $accent-color;
+}

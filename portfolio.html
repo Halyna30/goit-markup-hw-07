@@ -8,8 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/normalise.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -273,7 +272,7 @@
       <div class="container footer-container">
         <div class="footer-contacts">
           <a href="/" class="footer-logo"><span>Web</span> Studio </a>
-          <ul class="footer-contacts">
+          <ul class="footer-list-contacts">
             <li class="footer-text footer-item">
               <address>г. Киев, пр-т Леси Украинки, 26</address>
             </li>
@@ -325,8 +324,22 @@
             </li>
           </ul>
         </div>
-        <div>
-          <b>Подпишитесь на рассылку</b>
+        <div class="footer-form-section">
+          <b class="footer-form-title">Подпишитесь на рассылку</b>
+          <form action="#" class="footer-form">
+            <input
+              type="email"
+              class="form-email"
+              name="user-email"
+              placeholder="Email"
+            />
+            <button type="submit" class="button form-button">
+              Подписаться
+              <svg class="button-icon-send">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
