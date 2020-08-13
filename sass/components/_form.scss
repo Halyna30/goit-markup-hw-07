@@ -1,6 +1,10 @@
 .footer-form {
   display: flex;
   margin-top: 20px;
+
+  &-section {
+    padding-top: 12px;
+  }
 }
 
 .form-email {
@@ -16,19 +20,17 @@
   color: $second-text-color;
 }
 
-.footer-form-section {
-  padding-top: 12px;
-}
-
 .form-button {
   position: relative;
-}
-
-.form-button .button-icon-send {
-  position: absolute;
-  top: 13px;
-  right: 28px;
-
-  width: 24px;
-  height: 24px;
+  padding-top: 10px;
+  padding-left: 29px;
+  padding-right: 62px;
+  padding-bottom: 10px;
+  & .button-icon-send {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    width: 24px;
+    height: 24px;
+  }
 }

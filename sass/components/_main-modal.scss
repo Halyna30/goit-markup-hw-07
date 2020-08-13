@@ -8,11 +8,10 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: 5;
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .main-form {
@@ -33,22 +32,13 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
-
-.form-title {
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  padding: 40px 40px 30px 40px;
-  margin: 0;
-}
-
-.contact-information {
-  padding-top: 12px;
-  padding-left: 42px;
-  padding-bottom: 12px;
-  font-size: 14px;
-  letter-spacing: 0.01em;
+  .form-title {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding: 40px 40px 30px 40px;
+    margin: 0;
+  }
 }
 
 .user-message {
@@ -64,11 +54,18 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: 1px solid #2196f3;
+  }
 }
 
-.user-message:focus {
-  border: 1px solid #2196f3;
-  outline: 1px solid #2196f3;
+.contact-information {
+  padding-top: 12px;
+  padding-left: 42px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
 }
 
 .chekbox {
@@ -82,28 +79,25 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-}
+  .chekbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
 
-.chekbox-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-
-  border: 2px solid black;
-  border-radius: 4px;
-}
-
-.chekbox-input:checked + .chekbox-icon {
-  border-color: transparent;
-  background-color: $accent-color;
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.chekbox-link {
-  color: $accent-color;
+    border: 2px solid black;
+    border-radius: 4px;
+    .chekbox-input:checked + & {
+      border-color: transparent;
+      background-color: $accent-color;
+      background-image: url(../images/icon-check.svg);
+      background-size: contain;
+      background-origin: border-box;
+    }
+  }
+  .chekbox-link {
+    color: $accent-color;
+  }
 }
 
 .form-close-btn {
@@ -116,16 +110,13 @@
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-}
-
-.main-form-btn:hover,
-.main-form-btn:focus {
-  background-color: #188ce8;
-}
-
-.form-close-btn-svg {
-  width: 11px;
-  height: 11px;
+  .form-close-btn-svg {
+    width: 11px;
+    height: 11px;
+  }
+  &:hover .form-close-btn-svg {
+    fill: $accent-color;
+  }
 }
 
 .form-input {
@@ -133,16 +124,9 @@
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 28px;
-}
-
-.form-input.form-input-message {
-  margin-bottom: 20px;
-}
-
-.contact-form-input {
-  width: 100%;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  &.form-input-message {
+    margin-bottom: 20px;
+  }
 }
 
 .contact-form-label {
@@ -156,23 +140,28 @@
 
   color: #757575;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.label-message {
+    left: 16px;
+  }
 }
 
-.contact-form-label.label-message {
-  left: 16px;
-}
-
-.user-message:focus + .label-message,
-.user-message:not(:placeholder-shown) + .label-message {
-  transform: translate(-0%, -230%);
-  color: $accent-color;
-  font-size: 12px;
-  line-height: 1.16;
+.label-message {
+  .user-message:focus + &,
+  .user-message:not(:placeholder-shown) + & {
+    transform: translate(-0%, -230%);
+    color: $accent-color;
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 
 .main-form-btn {
   margin-left: auto;
   margin-right: auto;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
 
 .contact-form-svg {
@@ -180,40 +169,45 @@
   top: 12px;
   left: 19px;
   fill: #212121;
+  .contact-form-input:focus ~ & {
+    fill: $accent-color;
+  }
 }
 
-.contact-form-input:focus {
-  border: 1px solid #2196f3;
+.contact-form-input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline: 1px solid $accent-color;
+  &:focus {
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    outline: 1px solid $accent-color;
+  }
 }
 
-.contact-form-input:focus + .contact-form-label {
-  color: $accent-color;
-  font-size: 12px;
-  line-height: 1.16;
+.contact-form-label {
+  .contact-form-input:focus + & {
+    color: $accent-color;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .contact-form-input:focus + &,
+  .contact-form-input:not(:placeholder-shown) + & {
+    transform: translate(-100%, -230%);
+    color: $accent-color;
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 
-.contact-form-input:focus + .contact-form-label,
-.contact-form-input:not(:placeholder-shown) + .contact-form-label {
-  transform: translate(-100%, -230%);
-  color: $accent-color;
-  font-size: 12px;
-  line-height: 1.16;
+.label-phone {
+  .contact-form-input:focus + & {
+    transform: translate(-50%, -230%);
+  }
 }
 
-.contact-form-input:focus + .label-phone {
-  transform: translate(-50%, -230%);
-}
-
-.contact-form-input:focus + .label-email {
-  transform: translate(-65%, -230%);
-}
-
-.form-close-btn:hover .form-close-btn-svg {
-  fill: $accent-color;
-}
-
-.contact-form-input:focus ~ .contact-form-svg {
-  fill: $accent-color;
+.label-email {
+  .contact-form-input:focus + & {
+    transform: translate(-65%, -230%);
+  }
 }

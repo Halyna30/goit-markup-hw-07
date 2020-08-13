@@ -2,6 +2,9 @@
 
 .work-list {
   display: flex;
+  .work-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .item-title {
@@ -17,17 +20,10 @@
   background-color: rgba(47, 48, 58, 0.8);
   color: $second-text-color;
   text-align: center;
-}
-
-.work-list-item:not(:last-child) {
-  margin-right: 30px;
+  text-transform: uppercase;
 }
 
 .our-work {
   padding-top: 47px;
   padding-bottom: 94px;
-}
-
-.our-work .title {
-  margin-top: 0;
 }

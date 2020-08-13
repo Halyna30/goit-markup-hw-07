@@ -1,8 +1,10 @@
 /* Section about us */
-
-.about-us-icon-item {
-  width: 70px;
-  height: 70px;
+.about-us {
+  padding-top: 94px;
+  padding-bottom: 47px;
+  .about-us-list {
+    display: flex;
+  }
 }
 
 .about-us-icon {
@@ -13,34 +15,31 @@
   height: 120px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
+  &-item {
+    width: 70px;
+    height: 70px;
+  }
 }
 
-.about-us {
-  padding-top: 94px;
-  padding-bottom: 47px;
+.item {
+  .about-us-list &:not(:last-child) {
+    margin-right: 30px;
+  }
+  .about-us-text {
+    width: 270px;
+    line-height: 1.71;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-.about-us-list {
-  display: flex;
+.title {
+  .about-us-list & {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
-.about-us-text {
-  width: 270px;
-  line-height: 1.71;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.about-us-list .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.about-us-list .title {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.about-us-list h3,
-.item-title {
+.about-us-list h3 {
   text-transform: uppercase;
 }
