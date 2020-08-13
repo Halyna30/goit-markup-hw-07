@@ -1,4 +1,6 @@
 .footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
 
@@ -19,7 +21,6 @@
   padding-bottom: 15px;
   color: $second-text-color;
 }
-
 .form-button {
   position: relative;
   padding-top: 10px;
